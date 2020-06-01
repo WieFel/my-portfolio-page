@@ -8,7 +8,7 @@ socialLinks:
       id: GitHub,
       url: 'https://github.com/WieFel',
       name: 'GitHub',
-      fontAwesomeIcon: ['fa', 'github'],
+      fontAwesomeIcon: 'github',
     },
   ]
 ---

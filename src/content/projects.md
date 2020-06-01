@@ -13,7 +13,7 @@ projects:
         [
           {
             name: 'See on Google Play Store',
-            faIcon: ['fab', 'android'],
+            faIcon: 'android',
             url: 'https://play.google.com/store/apps/details?id=wattenzaehler.activities',
           },
         ],
@@ -29,7 +29,7 @@ projects:
         [
           {
             name: 'See on Google Play Store',
-            faIcon: ['fab', 'android'],
+            faIcon: 'android',
             url: 'https://play.google.com/store/apps/details?id=com.main.antenne',
           },
         ],
@@ -46,7 +46,7 @@ projects:
         [
           {
             name: 'See on Google Play Store',
-            faIcon: ['fab', 'android'],
+            faIcon: 'android',
             url: 'https://play.google.com/store/apps/details?id=com.main.verkehrsinfo',
           },
         ],
@@ -66,7 +66,7 @@ projects:
         [
           {
             name: 'See on GitHub',
-            faIcon: ['fab', 'github'],
+            faIcon: 'github',
             url: 'https://github.com/WieFel/LyricsGenreClassification',
           },
         ],
@@ -86,7 +86,7 @@ projects:
         [
           {
             name: 'See on GitHub',
-            faIcon: ['fab', 'github'],
+            faIcon: 'github',
             url: 'https://github.com/fluttercommunity/backdrop',
           },
         ],
@@ -102,12 +102,12 @@ projects:
         [
           {
             name: 'See on Google Play Store',
-            faIcon: ['fab', 'android'],
+            faIcon: 'android',
             url: 'https://play.google.com/store/apps/details?id=wattenzaehler.activities',
           },
           {
             name: 'See on App Store',
-            faIcon: ['fab', 'apple'],
+            faIcon: 'apple',
             url: 'https://apps.apple.com/us/app/bleckl/id1479732838',
           },
         ],

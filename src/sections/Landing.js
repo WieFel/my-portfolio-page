@@ -63,8 +63,8 @@ const LandingPage = () => (
       render={({ data }) => {
         const {
           name,
-          socialLinks,
           technologies,
+          socialLinks,
         } = data.markdownRemark.frontmatter;
 
         return (
