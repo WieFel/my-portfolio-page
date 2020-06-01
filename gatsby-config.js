@@ -1,15 +1,5 @@
-const contentful = require('contentful');
 const manifestConfig = require('./manifest-config');
 require('dotenv').config();
-
-const { ACCESS_TOKEN, SPACE_ID, ANALYTICS_ID, DETERMINISTIC } = process.env;
-
-const client = contentful.createClient({
-  space: SPACE_ID,
-  accessToken: ACCESS_TOKEN,
-});
-
-const getAboutEntry = entry => entry.sys.contentType.sys.id === 'about';
 
 const plugins = [
   'gatsby-plugin-react-helmet',
@@ -25,42 +15,30 @@ const plugins = [
     resolve: 'gatsby-plugin-manifest',
     options: manifestConfig,
   },
-  'gatsby-plugin-styled-components',
+  'gatsby-transformer-remark',
   {
-    resolve: 'gatsby-source-contentful',
+    resolve: `gatsby-source-filesystem`,
     options: {
-      spaceId: SPACE_ID,
-      accessToken: ACCESS_TOKEN,
+      name: `markdown`,
+      path: `${__dirname}/src/content`,
     },
   },
-  'gatsby-transformer-remark',
+  {
+    resolve: `gatsby-source-filesystem`,
+    options: {
+      name: `assets`,
+      path: `${__dirname}/src/assets`,
+    },
+  },
+  'gatsby-plugin-styled-components',
   'gatsby-plugin-offline',
+  'gatsby-plugin-sharp',
 ];
 
-module.exports = client.getEntries().then(entries => {
-  const { mediumUser } = entries.items.find(getAboutEntry).fields;
-
-  plugins.push({
-    resolve: 'gatsby-source-medium',
-    options: {
-      username: mediumUser || '@medium',
-    },
-  });
-
-  if (ANALYTICS_ID) {
-    plugins.push({
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: ANALYTICS_ID,
-      },
-    });
-  }
-
-  return {
-    siteMetadata: {
-      isMediumUserDefined: !!mediumUser,
-      deterministicBehaviour: !!DETERMINISTIC,
-    },
-    plugins,
-  };
-});
+module.exports = {
+  siteMetadata: {
+    isMediumUserDefined: false,
+    deterministicBehaviour: true,
+  },
+  plugins,
+};

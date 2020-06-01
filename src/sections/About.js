@@ -43,52 +43,36 @@ const ProfilePicture = styled(Image)`
 
 const About = () => (
   <Section.Container id="about" Background={Background}>
-    <Section.Header name="About me" icon="🙋‍♂️" label="person" />
     <StaticQuery
       query={graphql`
-        query AboutMeQuery {
-          contentfulAbout {
-            aboutMe {
-              childMarkdownRemark {
-                rawMarkdownBody
+        query AboutQuery {
+          allMarkdownRemark(filter: { frontmatter: { id: { eq: "about" } } }) {
+            nodes {
+              frontmatter {
+                title
               }
-            }
-            profile {
-              title
-              image: resize(width: 450, quality: 100) {
-                src
-              }
+              rawMarkdownBody
             }
           }
         }
       `}
       render={(data) => {
-        const { aboutMe, profile } = data.contentfulAbout;
+        const title = data.allMarkdownRemark.nodes[0].frontmatter.title;
+        const content = data.allMarkdownRemark.nodes[0].rawMarkdownBody;
         return (
-          <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
-            <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
-              <Fade bottom>
-                <ReactMarkdown
-                  source={aboutMe.childMarkdownRemark.rawMarkdownBody}
-                  renderers={markdownRenderer}
-                />
-              </Fade>
-            </Box>
-
-            <Box
-              width={[1, 1, 2 / 6]}
-              style={{ maxWidth: '300px', margin: 'auto' }}
-            >
-              <Fade right>
-                <ProfilePicture
-                  src={profile.image.src}
-                  alt={profile.title}
-                  mt={[4, 4, 0]}
-                  ml={[0, 0, 1]}
-                />
-              </Fade>
-            </Box>
-          </Flex>
+          <div>
+            <Section.Header name={title} icon="🙋‍♂️" label="person" />
+            <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+              <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
+                <Fade bottom>
+                  <ReactMarkdown
+                    source={content}
+                    renderers={markdownRenderer}
+                  />
+                </Fade>
+              </Box>
+            </Flex>
+          </div>
         );
       }}
     />

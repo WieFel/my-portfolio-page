@@ -39,14 +39,17 @@ const Footer = () => (
   <StaticQuery
     query={graphql`
       query FooterQuery {
-        contentfulAbout {
-          name
-          roles
-          socialLinks {
-            id
-            url
-            name
-            fontAwesomeIcon
+        allMarkdownRemark(filter: { frontmatter: { id: { eq: "landing" } } }) {
+          nodes {
+            frontmatter {
+              name
+              socialLinks {
+                id
+                url
+                name
+                fontAwesomeIcon
+              }
+            }
           }
         }
       }
