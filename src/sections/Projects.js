@@ -103,15 +103,7 @@ const ProjectTag = styled.div`
   }
 `;
 
-const Project = ({
-  name,
-  description,
-  projectUrl,
-  repositoryUrl,
-  type,
-  publishedDate,
-  logo,
-}) => (
+const Project = ({ name, description, links, type, publishedDate, logo }) => (
   <Card p={0}>
     <Flex style={{ height: CARD_HEIGHT }}>
       <TextContainer>
@@ -133,20 +125,15 @@ const Project = ({
               float: 'right',
             }}
           >
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="Check repository"
-                fontAwesomeIcon="github"
-                url={repositoryUrl}
-              />
-            </Box>
-            <Box mx={1} fontSize={5}>
-              <SocialLink
-                name="See project"
-                fontAwesomeIcon="globe"
-                url={projectUrl}
-              />
-            </Box>
+            {links.map((link) => (
+              <Box mx={1} fontSize={5}>
+                <SocialLink
+                  name={link.name}
+                  fontAwesomeIcon={link.faIcon}
+                  url={link.url}
+                />
+              </Box>
+            ))}
           </Flex>
           <ImageSubtitle bg="primary" color="white" y="bottom" x="right" round>
             {type}
@@ -163,8 +150,13 @@ const Project = ({
 Project.propTypes = {
   name: PropTypes.string.isRequired,
   description: PropTypes.string.isRequired,
-  projectUrl: PropTypes.string.isRequired,
-  repositoryUrl: PropTypes.string.isRequired,
+  links: PropTypes.arrayOf(
+    PropTypes.shape({
+      name: PropTypes.string,
+      faIcon: PropTypes.any,
+      url: PropTypes.string,
+    }),
+  ).isRequired,
   type: PropTypes.string.isRequired,
   publishedDate: PropTypes.string.isRequired,
   logo: PropTypes.shape({
@@ -181,34 +173,42 @@ const Projects = () => (
     <StaticQuery
       query={graphql`
         query ProjectsQuery {
-          contentfulAbout {
-            projects {
-              id
-              name
-              description
-              projectUrl
-              repositoryUrl
-              publishedDate(formatString: "YYYY")
-              type
-              logo {
-                title
-                image: resize(width: 200, quality: 100) {
-                  src
+          markdownRemark(frontmatter: { id: { eq: "projects" } }) {
+            frontmatter {
+              projects {
+                id
+                name
+                description
+                publishedDate
+                type
+                logo {
+                  title
+                  image {
+                    src
+                  }
+                }
+                links {
+                  faIcon
+                  name
+                  url
                 }
               }
             }
           }
         }
       `}
-      render={({ contentfulAbout }) => (
-        <CardContainer minWidth="350px">
-          {contentfulAbout.projects.map((p, i) => (
-            <Fade bottom delay={i * 200} key={p.id}>
-              <Project {...p} />
-            </Fade>
-          ))}
-        </CardContainer>
-      )}
+      render={({ data }) => {
+        const projects = data.markdownRemark.frontmatter.projects;
+        return (
+          <CardContainer minWidth="350px">
+            {projects.map((p, i) => (
+              <Fade bottom delay={i * 200} key={p.id}>
+                <Project {...p} />
+              </Fade>
+            ))}
+          </CardContainer>
+        );
+      }}
     />
   </Section.Container>
 );

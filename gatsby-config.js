@@ -33,12 +33,9 @@ const plugins = [
   'gatsby-plugin-styled-components',
   'gatsby-plugin-offline',
   'gatsby-plugin-sharp',
+  'gatsby-transformer-sharp',
 ];
 
 module.exports = {
-  siteMetadata: {
-    isMediumUserDefined: false,
-    deterministicBehaviour: true,
-  },
   plugins,
 };

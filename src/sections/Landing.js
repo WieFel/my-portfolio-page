@@ -46,26 +46,26 @@ const LandingPage = () => (
     <StaticQuery
       query={graphql`
         query LandingQuery {
-          allMarkdownRemark(
-            filter: { frontmatter: { id: { eq: "landing" } } }
-          ) {
-            nodes {
-              frontmatter {
+          markdownRemark(frontmatter: { id: { eq: "landing" } }) {
+            frontmatter {
+              name
+              technologies
+              socialLinks {
+                id
+                url
                 name
-                technologies
-                socialLinks {
-                  id
-                  url
-                  name
-                  fontAwesomeIcon
-                }
+                fontAwesomeIcon
               }
             }
           }
         }
       `}
-      render={({ contentfulAbout, site }) => {
-        const { name, socialLinks, technologies } = contentfulAbout;
+      render={({ data }) => {
+        const {
+          name,
+          socialLinks,
+          technologies,
+        } = data.markdownRemark.frontmatter;
 
         return (
           <Fragment>

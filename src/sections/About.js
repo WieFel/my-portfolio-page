@@ -6,7 +6,6 @@ import ReactMarkdown from 'react-markdown';
 import Fade from 'react-reveal/Fade';
 import Section from '../components/Section';
 import Triangle from '../components/Triangle';
-import markdownRenderer from '../components/MarkdownRenderer';
 
 const Background = () => (
   <div>
@@ -46,29 +45,24 @@ const About = () => (
     <StaticQuery
       query={graphql`
         query AboutQuery {
-          allMarkdownRemark(filter: { frontmatter: { id: { eq: "about" } } }) {
-            nodes {
-              frontmatter {
-                title
-              }
-              rawMarkdownBody
+          markdownRemark(frontmatter: { id: { eq: "about" } }) {
+            frontmatter {
+              title
             }
+            rawMarkdownBody
           }
         }
       `}
       render={(data) => {
-        const title = data.allMarkdownRemark.nodes[0].frontmatter.title;
-        const content = data.allMarkdownRemark.nodes[0].rawMarkdownBody;
+        const title = data.markdownRemark.frontmatter.title;
+        const content = data.markdownRemark.rawMarkdownBody;
         return (
           <div>
             <Section.Header name={title} icon="🙋‍♂️" label="person" />
             <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
               <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
                 <Fade bottom>
-                  <ReactMarkdown
-                    source={content}
-                    renderers={markdownRenderer}
-                  />
+                  <ReactMarkdown source={content} />
                 </Fade>
               </Box>
             </Flex>
