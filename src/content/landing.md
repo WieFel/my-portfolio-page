@@ -1,14 +1,35 @@
 ---
 id: landing
 name: Felix Wielander
-technologies: ['role1', 'role2']
+technologies:
+  [
+    'Gatsby',
+    'Flutter',
+    'Android',
+    'Angular',
+    'Ionic',
+    'Machine Learning',
+    'Deep Learning',
+  ]
 socialLinks:
   [
     {
-      id: GitHub,
+      id: 'github',
       url: 'https://github.com/WieFel',
       name: 'GitHub',
       fontAwesomeIcon: 'github',
+    },
+    {
+      id: 'gitlab',
+      url: 'https://gitlab.com/WieFel',
+      name: 'GitLab',
+      fontAwesomeIcon: 'gitlab',
+    },
+    {
+      id: 'linkedin',
+      url: 'https://www.linkedin.com/in/felix-wielander-77982a175',
+      name: 'LinkedIn',
+      fontAwesomeIcon: 'linkedin',
     },
   ]
 ---

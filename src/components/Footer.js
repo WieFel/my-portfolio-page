@@ -59,25 +59,26 @@ const Footer = () => (
         <Box p={[2, 3]} backgroundColor="primaryDark" as="footer">
           <FooterContainer>
             <Fade left>
-              <TextFooter fontSize={[2, 3]}>
-                <span>{`${name} Portfolio - Powered by `}</span>
-                <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
+              <TextFooter>
+                <p>{`2020 ${name}`}</p>
+                <p>
+                  Powered by{' '}
+                  <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
+                </p>
               </TextFooter>
             </Fade>
             <Flex>
               <Fade right>
-                <>
-                  {socialLinks.map(({ id, url, name, fontAwesomeIcon }) => (
-                    <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
-                      <SocialLink
-                        color="background"
-                        name={name}
-                        url={url}
-                        fontAwesomeIcon={fontAwesomeIcon}
-                      />
-                    </Box>
-                  ))}
-                </>
+                {socialLinks.map(({ id, url, name, fontAwesomeIcon }) => (
+                  <Box mx={[2, 3]} fontSize={[4, 5]} key={id}>
+                    <SocialLink
+                      color="background"
+                      name={name}
+                      url={url}
+                      fontAwesomeIcon={fontAwesomeIcon}
+                    />
+                  </Box>
+                ))}
               </Fade>
             </Flex>
           </FooterContainer>

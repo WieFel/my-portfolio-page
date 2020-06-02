@@ -81,7 +81,7 @@ const LandingPage = () => (
 
             <Heading
               as="h2"
-              color="primary"
+              color="primaryLight"
               fontSize={[5, 6]}
               mb={[3, 5]}
               textAlign="center"
