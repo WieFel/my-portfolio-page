@@ -8,7 +8,8 @@ projects:
       description: 'Point counter for the South Tyrolean card game Watten. (Now replaced by Bleckl)',
       publishedDate: '2012',
       type: 'App',
-      logo: { title: 'Bleckl app icon', image: { src: wattenzaehlerLogo } },
+      logo:
+        { title: 'Bleckl app icon', src: '../assets/logos/wattenzaehler.png' },
       links:
         [
           {
@@ -24,7 +25,8 @@ projects:
       description: 'South Tyrolean live football scores. Powered by Radio Die Antenne. (not officially in use anymore)',
       publishedDate: '2013',
       type: 'App',
-      logo: { title: 'dieAntenne app icon', image: { src: dieAntenneLogo } },
+      logo:
+        { title: 'dieAntenne app icon', src: '../assets/logos/dieAntenne.png' },
       links:
         [
           {
@@ -41,7 +43,10 @@ projects:
       publishedDate: '2014',
       type: 'App',
       logo:
-        { title: 'VerkehrsInfo app icon', image: { src: verkehrsinfoLogo } },
+        {
+          title: 'VerkehrsInfo app icon',
+          src: '../assets/logos/verkehrsinfo.png',
+        },
       links:
         [
           {
@@ -60,7 +65,7 @@ projects:
       logo:
         {
           title: 'Lyrics-Genre-Classification Logo',
-          image: { src: deeplLogo },
+          src: '../assets/logos/deep-learning.png',
         },
       links:
         [
@@ -80,7 +85,7 @@ projects:
       logo:
         {
           title: 'Flutter Community logo',
-          image: { src: flutterCommunityLogo },
+          src: '../assets/logos/flutter_community.png',
         },
       links:
         [
@@ -97,7 +102,7 @@ projects:
       description: 'Point counter for the South Tyrolean card games Watten & Sockn. Developed using Flutter.',
       publishedDate: '2020',
       type: 'App',
-      logo: { title: 'Bleckl app icon', image: { src: blecklLogo } },
+      logo: { title: 'Bleckl app icon', src: '../assets/logos/bleckl.png' },
       links:
         [
           {

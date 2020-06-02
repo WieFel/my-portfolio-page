@@ -60,7 +60,7 @@ const LandingPage = () => (
           }
         }
       `}
-      render={({ data }) => {
+      render={(data) => {
         const {
           name,
           technologies,

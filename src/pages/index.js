@@ -9,7 +9,9 @@ import Footer from '../components/Footer';
 const IndexPage = () => (
   <Layout>
     <Header />
+    <Landing />
     <About />
+    <Projects />
     <Footer />
   </Layout>
 );

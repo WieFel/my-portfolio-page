@@ -14,31 +14,24 @@ import Hide from '../components/Hide';
 const Background = () => (
   <div>
     <Triangle
-      color="secondaryLight"
-      height={['80vh', '80vh']}
+      color="backgroundDark"
+      height={['15vh', '10vh']}
       width={['100vw', '100vw']}
       invertX
     />
 
     <Triangle
-      color="background"
-      height={['50vh', '20vh']}
-      width={['50vw', '50vw']}
-      invertX
-    />
-
-    <Triangle
-      color="primaryDark"
-      height={['25vh', '40vh']}
-      width={['75vw', '60vw']}
-      invertX
+      color="secondary"
+      height={['50vh', '40vh']}
+      width={['70vw', '40vw']}
       invertY
     />
 
     <Triangle
-      color="backgroundDark"
-      height={['25vh', '20vh']}
+      color="primaryDark"
+      height={['40vh', '15vh']}
       width={['100vw', '100vw']}
+      invertX
       invertY
     />
   </div>
@@ -118,7 +111,10 @@ const Project = ({ name, description, links, type, publishedDate, logo }) => (
       </TextContainer>
 
       <ImageContainer>
-        <ProjectImage src={logo.image.src} alt={logo.title} />
+        <ProjectImage
+          src={logo.src.childImageSharp.fixed.src}
+          alt={logo.title}
+        />
         <ProjectTag>
           <Flex
             style={{
@@ -160,9 +156,7 @@ Project.propTypes = {
   type: PropTypes.string.isRequired,
   publishedDate: PropTypes.string.isRequired,
   logo: PropTypes.shape({
-    image: PropTypes.shape({
-      src: PropTypes.string,
-    }),
+    src: PropTypes.any,
     title: PropTypes.string,
   }).isRequired,
 };
@@ -183,8 +177,12 @@ const Projects = () => (
                 type
                 logo {
                   title
-                  image {
-                    src
+                  src {
+                    childImageSharp {
+                      fixed(width: 256, height: 256) {
+                        src
+                      }
+                    }
                   }
                 }
                 links {
@@ -197,7 +195,7 @@ const Projects = () => (
           }
         }
       `}
-      render={({ data }) => {
+      render={(data) => {
         const projects = data.markdownRemark.frontmatter.projects;
         return (
           <CardContainer minWidth="350px">

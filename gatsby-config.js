@@ -34,6 +34,7 @@ const plugins = [
   'gatsby-plugin-offline',
   'gatsby-plugin-sharp',
   'gatsby-transformer-sharp',
+  'gatsby-image',
 ];
 
 module.exports = {
