@@ -6,6 +6,7 @@ import { SectionLinks } from 'react-scroll-section';
 import Fade from 'react-reveal/Fade';
 import RouteLink from './RouteLink';
 import Logo from '../assets/icons/logo-white.svg';
+import LinkAnimated from './LinkAnimated';
 
 const capitalize = (s) => s && s[0].toUpperCase() + s.slice(1);
 
@@ -49,15 +50,17 @@ const Header = () => (
             const { home, links } = formatLinks(allLinks);
 
             const homeLink = home && (
-              <Image
-                src={Logo}
-                width="50px"
-                alt="Portfolio Logo"
-                onClick={home.onClick}
-                style={{
-                  cursor: 'pointer',
-                }}
-              />
+              <LinkAnimated>
+                <Image
+                  src={Logo}
+                  width="50px"
+                  alt="FW Logo"
+                  onClick={home.onClick}
+                  style={{
+                    cursor: 'pointer',
+                  }}
+                />
+              </LinkAnimated>
             );
             const navLinks = links.map(({ name, value }) => (
               <RouteLink
