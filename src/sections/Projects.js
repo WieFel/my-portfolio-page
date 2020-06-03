@@ -122,7 +122,7 @@ const Project = ({ name, description, links, type, publishedDate, logo }) => (
             }}
           >
             {links.map((link) => (
-              <Box mx={1} fontSize={5}>
+              <Box mx={1} fontSize={5} key={link.url}>
                 <SocialLink
                   name={link.name}
                   fontAwesomeIcon={link.faIcon}
