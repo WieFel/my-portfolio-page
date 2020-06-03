@@ -58,7 +58,7 @@ const About = () => (
         const content = data.markdownRemark.rawMarkdownBody;
         return (
           <>
-            <Section.Header name={title} icon="🙋‍♂️" label="person" />
+            <Section.Header name={title} icon="user" label="about" />
             <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
               <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
                 <Fade bottom>
