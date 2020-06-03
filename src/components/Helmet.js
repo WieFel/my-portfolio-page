@@ -10,7 +10,7 @@ const Helmet = ({ theme = {} }) => (
       query {
         markdownRemark(frontmatter: { id: { eq: "helmet" } }) {
           frontmatter {
-            name
+            title
             description
           }
         }
