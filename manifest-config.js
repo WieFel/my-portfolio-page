@@ -1,11 +1,11 @@
 const colors = require('./colors');
 
 module.exports = {
-  name: 'Mate Gatsby Starter',
-  short_name: 'Mate Gatsby Starter',
+  name: "Felix Wielander's Portfolio",
+  short_name: 'FW Portfolio',
   start_url: '/',
   background_color: colors.background,
-  theme_color: colors.primary,
+  theme_color: colors.primaryDark,
   display: 'minimal-ui',
-  icon: 'media/icon.png',
+  icon: 'src/assets/icons/logo-yellow.png',
 };
