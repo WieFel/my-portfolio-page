@@ -94,6 +94,11 @@ projects:
             faIcon: 'github',
             url: 'https://github.com/fluttercommunity/backdrop',
           },
+          {
+            name: 'See on Dart Pub',
+            faIcon: 'bullseye',
+            url: 'https://pub.dev/packages/backdrop',
+          },
         ],
     },
     {
