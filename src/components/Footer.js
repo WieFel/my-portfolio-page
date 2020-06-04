@@ -61,22 +61,20 @@ const Footer = () => (
             <Fade left>
               <TextFooter>
                 <p>{`2020 ${name}`}</p>
-                <p>
-                  <div>
-                    Powered by{' '}
-                    <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
-                  </div>
-                  <div>
-                    Some icons made by{' '}
-                    <a
-                      href="https://www.flaticon.com/authors/eucalyp"
-                      title="Eucalyp"
-                    >
-                      Eucalyp
-                    </a>
-                    .
-                  </div>
-                </p>
+                <div>
+                  Powered by{' '}
+                  <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
+                </div>
+                <div>
+                  Some icons made by{' '}
+                  <a
+                    href="https://www.flaticon.com/authors/eucalyp"
+                    title="Eucalyp"
+                  >
+                    Eucalyp
+                  </a>
+                  .
+                </div>
               </TextFooter>
             </Fade>
             <Flex>
