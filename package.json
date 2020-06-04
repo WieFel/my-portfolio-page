@@ -1,31 +1,30 @@
 {
-  "name": "gatsby-starter-mate",
+  "name": "felix-portfolio-page",
   "version": "2.5.2",
-  "description": "Gatsby v2 starter to create a top notch portfolio!",
+  "description": "My personal portfolio!",
   "main": "index.js",
   "scripts": {
     "build": "gatsby clean && gatsby build",
     "develop": "gatsby clean && gatsby develop",
     "start": "yarn develop",
     "serve": "yarn build && gatsby serve -p 9000",
-    "lint": "eslint ./src",
-    "setup": "node ./bin/setup.js",
-    "test": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress run",
-    "test:open": "percy exec -t 350 -h cdn-images-1.medium.com -- cypress open",
-    "test:ci": "DETERMINISTIC=true start-server-and-test serve 9000"
+    "lint": "eslint ./src"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/EmaSuriano/gatsby-starter-mate.git"
   },
   "keywords": [
-    "gatsby",
-    "starter",
-    "contentful",
+    "felix",
+    "wielander",
+    "portfolio",
     "PWA",
-    "portfolio"
+    "projects",
+    "about",
+    "computer scientist",
+    "informatics"
   ],
-  "author": "Ema Suriano",
+  "author": "Felix Wielander",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/EmaSuriano/gatsby-starter-mate/issues"
