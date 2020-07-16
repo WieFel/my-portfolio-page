@@ -59,7 +59,12 @@ const About = () => (
         return (
           <>
             <Section.Header name={title} icon="user" label="about" />
-            <Flex justifyContent="center" alignItems="center" flexWrap="wrap">
+            <Flex
+              justifyContent="center"
+              alignItems="center"
+              flexWrap="wrap"
+              style={{ 'font-size': '1.1em' }}
+            >
               <Box width={[1, 1, 4 / 6]} px={[1, 2, 4]}>
                 <Fade bottom>
                   <ReactMarkdown source={content} />
