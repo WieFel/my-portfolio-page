@@ -122,5 +122,22 @@ projects:
           },
         ],
     },
+    {
+      id: 'fw-portfolio',
+      name: 'This webpage',
+      description: 'My portfolio page showing the projects I made. Created using Gatsby.',
+      publishedDate: '2020',
+      type: 'Webpage',
+      logo:
+        { title: 'FW Portfolio icon', src: '../assets/icons/logo-yellow.png' },
+      links:
+        [
+          {
+            name: 'See on GitHub',
+            faIcon: 'github',
+            url: 'https://github.com/WieFel/my-portfolio-page',
+          },
+        ],
+    },
   ]
 ---
