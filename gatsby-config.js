@@ -12,6 +12,12 @@ const plugins = [
     },
   },
   {
+    resolve: `gatsby-plugin-canonical-urls`,
+    options: {
+      siteUrl: `https://wiefel.dev`,
+    },
+  },
+  {
     resolve: 'gatsby-plugin-manifest',
     options: manifestConfig,
   },
@@ -38,5 +44,10 @@ const plugins = [
 ];
 
 module.exports = {
+  siteMetadata: {
+    title: `Felix Wielander's Portfolio`,
+    siteUrl: `https://wiefel.dev`,
+    description: `This Felix Wielander's personal portfolio page, showing his interests and the projects that he has made.`,
+  },
   plugins,
 };

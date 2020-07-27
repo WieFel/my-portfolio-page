@@ -38,6 +38,7 @@
     "envfile": "^5.2.0",
     "gatsby": "2.15.22",
     "gatsby-image": "^2.4.5",
+    "gatsby-plugin-canonical-urls": "^2.3.10",
     "gatsby-plugin-google-analytics": "^2.3.2",
     "gatsby-plugin-manifest": "^2.4.3",
     "gatsby-plugin-offline": "^2.0.25",

@@ -1,5 +1,5 @@
 ---
 id: helmet
-title: Felix's Portfolio
-description: This is my personal portfolio page showing the projects that I have made.
+title: Felix Wielander's Portfolio
+description: This Felix Wielander's personal portfolio page, showing his interests and the projects that he has made.
 ---
