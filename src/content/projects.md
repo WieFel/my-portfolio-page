@@ -139,5 +139,15 @@ projects:
           },
         ],
     },
+    {
+      id: 'gwl',
+      name: 'GWL Webpage',
+      description: 'The web page of Gapp Wielander Laurenza, the law office of my father.',
+      publishedDate: '2020',
+      type: 'Webpage',
+      logo: { title: 'GWL web page icon', src: '../assets/logos/gwl.png' },
+      links:
+        [{ name: 'Open web page', faIcon: 'globe', url: 'https://gwl.it/' }],
+    },
   ]
 ---
