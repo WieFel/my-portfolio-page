@@ -12,8 +12,9 @@ I am Felix, a Computer Science student who is interested in different topics aro
 - App development using different frameworks such as Flutter, Ionic, Angular and also native Android
 - Web page development using HTML, CSS, JavaScript and frameworks like Gatsby, React, Angular
 - UI development and design
-- Backend-development for apps and other applications
+- Backend-development for apps and other applications with Firebase, etc.
 - Machine learning/deep learning
+- 3D printing using my [Creality Ender 3 Pro](https://www.creality3dofficial.com/products/creality-ender-3-pro-3d-printer)
 
 # Other technology interests
 
@@ -22,4 +23,3 @@ I am Felix, a Computer Science student who is interested in different topics aro
 - Blockchain
 - Quantum Computing
 - Arduino
-- 3D printing
