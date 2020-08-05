@@ -1,10 +1,10 @@
 import React from 'react';
-import { Helmet as ReactHelmet } from 'react-helmet';
+import { Helmet } from 'react-helmet';
 import { StaticQuery, graphql } from 'gatsby';
 import { withTheme } from 'styled-components';
 import PropTypes from 'prop-types';
 
-const Helmet = ({ theme = {} }) => (
+const helmet = ({ theme = {} }) => (
   <StaticQuery
     query={graphql`
       query {
@@ -12,6 +12,7 @@ const Helmet = ({ theme = {} }) => (
           frontmatter {
             title
             description
+            keywords
           }
         }
         file(relativePath: { eq: "icons/logo-yellow.png" }) {
@@ -33,17 +34,18 @@ const Helmet = ({ theme = {} }) => (
       }
     `}
     render={(data) => {
-      const { title, description } = data.markdownRemark.frontmatter;
+      const { title, description, keywords } = data.markdownRemark.frontmatter;
       const childImageSharp = data.file.childImageSharp;
 
       return (
-        <ReactHelmet htmlAttributes={{ lang: 'en' }}>
+        <Helmet htmlAttributes={{ lang: 'en' }}>
           <meta charSet="utf-8" />
           <title>{title}</title>
           <meta name="description" content={description} />
           <link rel="shortcut icon" href={childImageSharp.favicon32.src} />
           <meta name="theme-color" content={theme.background} />
           <meta name="image" content={childImageSharp.favicon32.src} />
+          <meta name="keywords" content={keywords} />
           <meta itemProp="name" content={title} />
           <meta itemProp="description" content={description} />
           <meta itemProp="image" content={childImageSharp.favicon32.src} />
@@ -75,7 +77,7 @@ const Helmet = ({ theme = {} }) => (
             sizes="16x16"
             href={childImageSharp.favicon16.src}
           />
-        </ReactHelmet>
+        </Helmet>
       );
     }}
   />
@@ -86,4 +88,4 @@ Helmet.propTypes = {
   theme: PropTypes.object,
 };
 
-export default withTheme(Helmet);
+export default withTheme(helmet);
