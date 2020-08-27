@@ -5,7 +5,7 @@ title: About me
 
 # Who am I?
 
-I am Felix, a Computer Science student who is interested in different topics around information technology and is especially passionate about app development.
+I am Felix, a computer scientist who is interested in different topics around information technology and is especially passionate about app development.
 
 # My passions
 
