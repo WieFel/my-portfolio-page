@@ -3,13 +3,13 @@ id: landing
 name: Felix Wielander
 technologies:
   [
-    'Gatsby',
-    'Flutter',
-    'Android',
-    'Angular',
-    'Ionic',
-    'Machine Learning',
-    'Deep Learning',
+    '#Gatsby',
+    '#Flutter',
+    '#Android',
+    '#Angular',
+    '#Ionic',
+    '#MachineLearning',
+    '#DeepLearning',
   ]
 socialLinks:
   [

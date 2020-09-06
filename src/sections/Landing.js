@@ -87,11 +87,11 @@ const LandingPage = () => (
               textAlign="center"
               style={centerHorizontally}
             >
-              <TextLoop interval={5000}>
+              <TextLoop interval={4000}>
                 {technologies
                   .sort(() => Math.random() - 0.5)
                   .map((text) => (
-                    <Text width={[300, 500]} key={text}>
+                    <Text width={[300, 500]} key={text} fontSize={[5, 6]}>
                       {text}
                     </Text>
                   ))}
