@@ -14,7 +14,7 @@ I am Felix, a computer scientist who is interested in different topics around in
 - UI development and design
 - Backend-development for apps and other applications with Firebase, etc.
 - Machine learning/deep learning
-- 3D printing using my [Creality Ender 3 Pro](https://www.creality3dofficial.com/products/creality-ender-3-pro-3d-printer)
+- 3D printing using my [Creality Ender 3 Pro](https://www.creality3dofficial.com/products/creality-ender-3-pro-3d-printer). Check out the things I created on [Thingiverse](https://www.thingiverse.com/wiefel/designs)!
 
 # Other technology interests
 
