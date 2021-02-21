@@ -1,6 +1,6 @@
 ---
 id: landing
-name: Felix Wielander
+name: Felix
 technologies:
   [
     '#Gatsby',

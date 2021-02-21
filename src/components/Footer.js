@@ -60,7 +60,7 @@ const Footer = () => (
           <FooterContainer>
             <Fade left>
               <TextFooter>
-                <p>{`2020 ${name}`}</p>
+                <p>{`2021 Felix Wielander`}</p>
                 <div>
                   Powered by{' '}
                   <Link href="https://www.gatsbyjs.org/">Gatsby</Link>
