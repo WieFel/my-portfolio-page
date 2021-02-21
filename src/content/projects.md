@@ -142,12 +142,54 @@ projects:
     {
       id: 'gwl',
       name: 'GWL Webpage',
-      description: 'The web page of Gapp Wielander Laurenza, the law office of my father.',
+      description: 'The web page of the law office Gapp Wielander Laurenza.',
       publishedDate: '2020',
       type: 'Webpage',
       logo: { title: 'GWL web page icon', src: '../assets/logos/gwl.png' },
       links:
         [{ name: 'Open web page', faIcon: 'globe', url: 'https://gwl.it/' }],
+    },
+    {
+      id: 'gallerize',
+      name: 'Gallerize',
+      description: 'Maintainer of Gallerize, a Flutter package for creating a gallery (demo) app for developed Flutter packages/widgets.',
+      publishedDate: '2020',
+      type: 'Flutter package',
+      logo: { title: 'Flutter logo', src: '../assets/logos/flutter.png' },
+      links:
+        [
+          {
+            name: 'See on GitHub',
+            faIcon: 'github',
+            url: 'https://github.com/WieFel/gallerize',
+          },
+          {
+            name: 'See on Dart Pub',
+            faIcon: 'bullseye',
+            url: 'https://pub.dev/packages/gallerize',
+          },
+        ],
+    },
+    {
+      id: 'hsv_color_pickers',
+      name: 'HSV Color Pickers',
+      description: 'Maintainer of hsv_color_pickers, a Flutter package that offers widgets for picking the different attributes of a HSV color: hue, saturation and value.',
+      publishedDate: '2021',
+      type: 'Flutter package',
+      logo: { title: 'Flutter logo', src: '../assets/logos/flutter.png' },
+      links:
+        [
+          {
+            name: 'See on GitHub',
+            faIcon: 'github',
+            url: 'https://github.com/WieFel/hsv_color_pickers',
+          },
+          {
+            name: 'See on Dart Pub',
+            faIcon: 'bullseye',
+            url: 'https://pub.dev/packages/hsv_color_pickers',
+          },
+        ],
     },
   ]
 ---
