@@ -191,5 +191,26 @@ projects:
           },
         ],
     },
+    {
+      id: 'number_paginator',
+      name: 'Number Paginator',
+      description: 'Maintainer of number_paginator, a Flutter package for implementing pagination using page numbers.',
+      publishedDate: '2021',
+      type: 'Flutter package',
+      logo: { title: 'Flutter logo', src: '../assets/logos/flutter.png' },
+      links:
+        [
+          {
+            name: 'See on GitHub',
+            faIcon: 'github',
+            url: 'https://github.com/WieFel/number_paginator',
+          },
+          {
+            name: 'See on Dart Pub',
+            faIcon: 'bullseye',
+            url: 'https://pub.dev/packages/number_paginator',
+          },
+        ],
+    },
   ]
 ---
