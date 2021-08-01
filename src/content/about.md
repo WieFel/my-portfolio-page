@@ -16,7 +16,7 @@ I am Felix, a computer scientist who is interested in different topics around in
 - Backend-development for apps and other applications with Firebase, etc.
 - Machine learning/deep learning
 - 3D printing using my [Creality Ender 3 Pro](https://www.creality3dofficial.com/products/creality-ender-3-pro-3d-printer). Check out the things I created on [Thingiverse](https://www.thingiverse.com/wiefel/designs)!
-- Learning and speaking different languages: I speak German, Italian, Spanish and English. Check out my first appearence within a YouTube video [here](https://youtu.be/Lp3aTlv5kMk)!
+- Learning and speaking different languages: I speak German, Italian, Spanish and English. Check out my first appearence within a Spanish YouTube video [here](https://youtu.be/Lp3aTlv5kMk)!
 
 # Technology interests
 
