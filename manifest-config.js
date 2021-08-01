@@ -8,4 +8,7 @@ module.exports = {
   theme_color: colors.primaryDark,
   display: 'minimal-ui',
   icon: 'src/assets/icons/logo-yellow.png',
+  icon_options: {
+    purpose: `any maskable`,
+  },
 };
